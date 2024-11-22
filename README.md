@@ -8,6 +8,95 @@ To write a verilog code for 4bit up/down counter and verify the functionality us
 
 1.	nclaunch- Used for Functional Simulation
 
+   
+## Design Information and Bock Diagram:
+
+	An up/down counter is a digital counter which can be set to count either from 0 to
+MAX_VALUE or MAX_VALUE to 0.
+
+	The direction of the count(mode) is selected using a single bit input. The module has 3 inputs - clk, reset which is active high and a Up Or Down mode input. 
+The output is Counter which is 4 bit in size.
+
+	When Up mode is selected, counter counts from 0 to 15 and then again from 0 to 15.
+
+	When Down mode is selected, counter counts from 15 to 0 and then again from 15 to 0.
+
+	Changing mode doesn't reset the Count value to zero.
+
+	You have to apply high value to reset, to reset the Counter output.
+ 
+![image](https://github.com/user-attachments/assets/efe1095e-989e-4005-b53b-e9dc50d4025c)
+
+## Fig 1: 4 Bit Up/Down Counter
+
+## Creating a Work space :
+
+	Create a folder in your name (Note: Give folder name without any space) and Create a new sub-Directory name it as Exp2 or counter_design for the Design and open a terminal from the Sub-Directory.
+Functional Simulation: 
+
+	Invoke the cadence environment by type the below commands 
+
+	tcsh (Invokes C-Shell) 
+
+	source /cadence/install/cshrc (mention the path of the tools) 
+      (The path of cshrc could vary depending on the installation destination)
+      
+	After this you can see the window like below 
+![Screenshot 2024-10-05 082611](https://github.com/user-attachments/assets/27f84a16-de82-4a96-87fb-63ad547e62f0)
+
+
+## Fig 2: Invoke the Cadence Environment
+
+
+## counter.v
+
+`timescale 1ns / 1 ns
+
+module counter(clk,m,rst,count);
+
+input clk,m,rst;
+
+output reg [3:0] count;
+
+always@(posedge clk or negedge rst)
+
+begin
+
+if (!rst)
+
+count=0;
+
+else if(m)
+
+count=count+1;
+
+else
+
+count=count-1;
+
+end
+
+endmodule
+
+## Creating Source Code:
+
+	In the Terminal, type gedit <filename>.v or <filename>.vhdl depending on the HDL Language you are to use (ex: 4b_up_downCount.v).
+
+	A Blank Document opens up into which the following source code can be typed down.
+
+(Note : File name should be with HDL Extension)
+
+### Verilog code for 4-Bit Up-Down Counter:
+
+
+	Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
+
+## Creating Test bench:
+
+	Similarly, create your test bench using gedit <filename_tb>.v or <filename_tb>.vhdl to open a new blank document (4bitup_down_count_tb.v).
+
+### Test-bench code for 4-Bit Up-Down Counter:
+
 ## Counter_test
 `timescale 1ns / 1ns
 
@@ -51,98 +140,8 @@ initial
 
 endmodule
 
-## counter.v
-
-`timescale 1ns / 1 ns
-
-module counter(clk,m,rst,count);
-
-input clk,m,rst;
-
-output reg [3:0] count;
-
-always@(posedge clk or negedge rst)
-
-begin
-
-if (!rst)
-
-count=0;
-
-else if(m)
-
-count=count+1;
-
-else
-
-count=count-1;
-
-end
-
-endmodule
 
 
-   
-## Design Information and Bock Diagram:
-
-	An up/down counter is a digital counter which can be set to count either from 0 to
-MAX_VALUE or MAX_VALUE to 0.
-
-	The direction of the count(mode) is selected using a single bit input. The module has 3 inputs - clk, reset which is active high and a Up Or Down mode input. 
-The output is Counter which is 4 bit in size.
-
-	When Up mode is selected, counter counts from 0 to 15 and then again from 0 to 15.
-
-	When Down mode is selected, counter counts from 15 to 0 and then again from 15 to 0.
-
-	Changing mode doesn't reset the Count value to zero.
-
-	You have to apply high value to reset, to reset the Counter output.
- 
-![image](https://github.com/user-attachments/assets/efe1095e-989e-4005-b53b-e9dc50d4025c)
-
-## Fig 1: 4 Bit Up/Down Counter
-
-## Creating a Work space :
-
-	Create a folder in your name (Note: Give folder name without any space) and Create a new sub-Directory name it as Exp2 or counter_design for the Design and open a terminal from the Sub-Directory.
-Functional Simulation: 
-
-	Invoke the cadence environment by type the below commands 
-
-	tcsh (Invokes C-Shell) 
-
-	source /cadence/install/cshrc (mention the path of the tools) 
-      (The path of cshrc could vary depending on the installation destination)
-      
-	After this you can see the window like below 
-![Screenshot 2024-10-05 082611](https://github.com/user-attachments/assets/27f84a16-de82-4a96-87fb-63ad547e62f0)
-
-
-## Fig 2: Invoke the Cadence Environment
-
-
-## Creating Source Code:
-
-	In the Terminal, type gedit <filename>.v or <filename>.vhdl depending on the HDL Language you are to use (ex: 4b_up_downCount.v).
-
-	A Blank Document opens up into which the following source code can be typed down.
-
-(Note : File name should be with HDL Extension)
-
-### Verilog code for 4-Bit Up-Down Counter:
-
-*/Program  for  4-Bit Up-Down Counter
-
-	Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
-
-## Creating Test bench:
-
-	Similarly, create your test bench using gedit <filename_tb>.v or <filename_tb>.vhdl to open a new blank document (4bitup_down_count_tb.v).
-
-### Test-bench code for 4-Bit Up-Down Counter:
-
-*/Test bench Program  for  4-Bit Up-Down Counter
 
 ### To Launch Simulation tool
 	linux:/> nclaunch -new&            // “-new” option is used for invoking NCVERILOG for the first time for any design
