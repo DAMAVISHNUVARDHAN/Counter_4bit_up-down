@@ -165,7 +165,7 @@ Click the cds.lib file and save the file by clicking on Save option
 	Select “Don’t include any libraries (verilog design)” from “New cds.lib file” and click on “OK” as in below figure
 
 	We are simulating verilog design without using any libraries
-![Screenshot 2024-10-05 082745](https://github.com/user-attachments/assets/a15c1eaf-9c72-41e5-83ec-9613f2d81a4e)
+![Screenshot 2024-11-25 101002](https://github.com/user-attachments/assets/61605763-0c22-4630-b3be-7c2d079f1576)
 
 ## Fig 5: Selection of Don’t include any libraries
 
@@ -201,7 +201,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 Left side select the file and in Tools : launch verilog compiler with current selection will get enable. Click it to compile the code 
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation 
-![Screenshot 2024-10-05 082822](https://github.com/user-attachments/assets/616c1c96-a4b1-4fba-937b-7cf0bea85345)
+![Screenshot 2024-11-25 101219](https://github.com/user-attachments/assets/1783157b-4261-4a4c-9a48-82e1de74b2ac)
 
 ## Fig 7: Compiled database in worklib
 
