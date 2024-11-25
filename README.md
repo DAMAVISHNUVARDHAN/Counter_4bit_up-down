@@ -231,7 +231,8 @@ It contains statements that map logical library names to their physical director
 9.	It also establishes net connectivity and prepares all of this for simulation
     
 	After elaboration the file will come under snapshot. Select the test bench and simulate it. 
-![Screenshot 2024-10-05 082900](https://github.com/user-attachments/assets/e3a748ee-cefd-4923-b2ad-ae7e07c6c1fd)
+![Screenshot 2024-11-25 101219](https://github.com/user-attachments/assets/6738c1f1-8976-4e1e-9f45-622905deea05)
+
 
 ## Fig 8: Elaboration Launch Option
 
