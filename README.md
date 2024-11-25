@@ -42,7 +42,7 @@ Functional Simulation:
       (The path of cshrc could vary depending on the installation destination)
       
 	After this you can see the window like below 
-![Screenshot 2024-10-05 082611](https://github.com/user-attachments/assets/27f84a16-de82-4a96-87fb-63ad547e62f0)
+![Screenshot 2024-11-25 101610](https://github.com/user-attachments/assets/6e41f73f-ffea-4878-86a4-9e95cb05a2a2)
 
 
 ## Fig 2: Invoke the Cadence Environment
