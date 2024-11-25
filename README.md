@@ -231,7 +231,7 @@ It contains statements that map logical library names to their physical director
 9.	It also establishes net connectivity and prepares all of this for simulation
     
 	After elaboration the file will come under snapshot. Select the test bench and simulate it. 
-![Screenshot 2024-11-25 101219](https://github.com/user-attachments/assets/6738c1f1-8976-4e1e-9f45-622905deea05)
+
 
 
 ## Fig 8: Elaboration Launch Option
@@ -245,7 +245,7 @@ It contains statements that map logical library names to their physical director
 	Simulation allow to dump design and test bench signals into a waveform 
 
 	Steps for simulation – Run the simulation command with simulator options
-![Screenshot 2024-10-05 082900](https://github.com/user-attachments/assets/eeb0a9ef-798c-45ef-b55d-8af223d43597)
+![Screenshot 2024-11-25 101219](https://github.com/user-attachments/assets/6738c1f1-8976-4e1e-9f45-622905deea05)
 
 ## Fig 9: Design Browser window for simulation
 ![Screenshot 2024-10-05 082942](https://github.com/user-attachments/assets/e84307c1-600f-4ed0-a433-5b4832e40a5e)
